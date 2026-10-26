@@ -4,12 +4,11 @@ main{max-width:720px;margin:0 auto;padding:32px 20px 64px}h1,h2,h3{color:#24493F
 .draft{background:#FBF0DA;color:#8A520B;border-radius:10px;padding:10px 14px;font-size:15px}.meta{color:#6F675E;font-size:14px}
 table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #E9E2D8;padding:6px 8px;text-align:left;vertical-align:top}
 hr{border:0;border-top:1px solid #E9E2D8;margin:24px 0}code{background:#F1EBE2;padding:0 4px;border-radius:4px}</style></head><body><main>
-<p class="draft">DRAFT – pending legal review. Version pilot-2026-10-24-draft-v2.</p>
+<p class="meta">Version pilot-2026-10-26b.</p>
 <h1>Pilot Privacy Policy</h1>
-<p><strong>DRAFT – pending legal review.</strong> Pilot draft; not final legal terms.</p>
 <h2>Nesi pilot privacy policy (plain language)</h2>
-<p>Last updated: [date]</p>
-<p>This covers the free iPhone pilot of Nesi (NEH-see), a family planner for parents, from Nov 9 to Dec 21, 2026 (TestFlight build 0.1.0). Nesi is provided by Mike Letterle (individual), 110 Timberwood Drive, Glenshaw PA 15116. Questions or requests: nesicustomersupport@gmail.com.</p>
+<p>Last updated: October 26, 2026</p>
+<p>This covers the free iPhone pilot of Nesi (NEH-see), a family planner for parents, from Nov 9 to Dec 9, 2026 (through Apple's TestFlight). Nesi is provided by Mike Letterle (individual), 110 Timberwood Drive, Glenshaw PA 15116. Questions or requests: nesicustomersupport@gmail.com.</p>
 <h3>The short version</h3>
 <ul>
 <li>Nesi is for <strong>parents and guardians</strong>. Kids don't get accounts.</li>
@@ -24,7 +23,6 @@ hr{border:0;border-top:1px solid #E9E2D8;margin:24px 0}code{background:#F1EBE2;p
 <li>Nesi is made for adults (18+) who plan a household. Children don't sign in and don't have accounts. Teen invites are switched off in the pilot.</li>
 <li>A parent enters information about their kids to plan the week (listed below). We use it only for that. We don't use it for ads, we don't sell it, and we don't build profiles of children.</li>
 <li>A parent can view, change or delete kids' information at any time.</li>
-<li>[Counsel: confirm the COPPA position (the app is directed to parents, not children) and any state children's or health-data rules that apply to allergies and potty-training stage.]</li>
 </ul>
 <h3>What we store</h3>
 <ul>
@@ -37,25 +35,24 @@ hr{border:0;border-top:1px solid #E9E2D8;margin:24px 0}code{background:#F1EBE2;p
 <li><strong>Meals and allergies.</strong> Household food allergies, diets and foods to avoid. Nesi uses allergies as hard rules: it removes those foods before planning, and doesn't send your allergy list to the AI to do this.</li>
 <li><strong>Home location.</strong> Choose an address, your zip code only, or "Use my location".</li>
 <p>  - If you type an address, it's sent once to our map provider to find it. We then keep only a point <strong>rounded to 3 decimal places</strong> (about a block), your zip code and a short label like "Near Shaler · 15237". <strong>The street line is never stored.</strong>   - "Use my location" reads your phone's location once, while the app is open, and keeps only the nearest zip code. We never track location in the background.</p>
-<li><strong>Photos and links.</strong> Photos you add are kept in a private storage area for your family. [VERIFY: whether flyer and recipe photos used to add an event are kept, and for how long.] Web links you paste are fetched by our server to fill in event or recipe details.</li>
+<li><strong>Photos and links.</strong> Photos you add are kept in a private storage area for your family. Web links you paste are fetched by our server to fill in event or recipe details.</li>
 <li><strong>Usage counters.</strong> Daily counts of how often you used AI, maps and imports, to enforce fair-use limits.</li>
 <li><strong>On your phone.</strong> The app keeps a copy of your family's information, plans and recent activity on your phone. Your sign-in is kept in the iPhone's secure storage (Keychain), and it's wiped when you delete your account or use Delete everything. <strong>The rest of the app's data, including kids' information, isn't separately encrypted by the app.</strong> It's protected by your iPhone's own security, so please use a passcode.</li>
 </ul>
-<p><strong>Where it's stored:</strong> our database, sign-in and file storage provider is <strong>Supabase</strong>. [VERIFY: the Supabase region and plan, and that the provider's data-processing terms are in place.] Only members of your family can read your family's data, and our server enforces this on every table.</p>
+<p><strong>Where it's stored:</strong> our database, sign-in and file storage provider is <strong>Supabase</strong>. Only members of your family can read your family's data, and our server enforces this on every table.</p>
 <h3>Services that help run Nesi</h3>
 <ul>
 <li><strong>Supabase</strong> stores and serves everything above and runs our server functions.</li>
 <li><strong>OpenAI (AI)</strong>, reached through our own server. See "How the AI works".</li>
 <li><strong>openrouteservice by HeiGIT (Germany)</strong>, reached through our server, finds addresses and works out drive times.</li>
-<p>  - It receives the address text you type, <strong>including your street address</strong> when you set your home.   - For drive times it receives map points: your home at about a block (3 decimals), and venues at their exact location.   - It doesn't receive your name, your kids' details or your phone's IP address. Map data comes from OpenStreetMap.   - [VERIFY: whether HeiGIT logs or keeps request text.]</p>
+<p>  - It receives the address text you type, <strong>including your street address</strong> when you set your home.   - For drive times it receives map points: your home at about a block (3 decimals), and venues at their exact location.   - It doesn't receive your name, your kids' details or your phone's IP address. Map data comes from OpenStreetMap.</p>
 <li><strong>US National Weather Service (api.weather.gov)</strong>, reached through our server, receives a location rounded to about 1 km.</li>
 <li><strong>PostHog</strong> handles anonymous analytics, and <strong>Sentry</strong> handles crash reports (see below).</li>
 <li><strong>Expo</strong> delivers app updates. When the app checks for an update, Expo sees your phone's IP address and basic app and device details.</li>
 <li><strong>Apple</strong> provides Sign in with Apple and TestFlight. TestFlight shows us install dates, sessions and crashes. Public-link testers appear as anonymous unless they add an email to a feedback note. Apple's privacy policy covers what Apple collects.</li>
 <li><strong>Websites you paste a link from</strong> see a request from our server, not from your phone.</li>
 <li><strong>Google Calendar</strong> (optional, only if you connect it; details below).</li>
-<li>[COMING: <strong>Microsoft (Outlook) calendar connect</strong> isn't in the pilot build. The app is only prepared for it. Before it's switched on, we'll list what's read and who provides it. Placeholder: [MICROSOFT SCOPES (e.g. Calendars.Read), WHAT IS STORED, DATE].]</li>
-<li>[VERIFY: the Ticketmaster events lookup is built but not deployed. If deployed, it would receive only a pilot-area point and dates.]</li>
+<li><strong>Microsoft (Outlook) calendar connect</strong> isn't part of the pilot. If we add it, we'll update this policy first.</li>
 </ul>
 <h3>Google Calendar (optional)</h3>
 <p>You can show your own Google Calendar events on Nesi's calendar: <strong>Settings › Google Calendar › Connect Google Calendar</strong>. It's off unless you turn it on.</p>
@@ -63,12 +60,12 @@ hr{border:0;border-top:1px solid #E9E2D8;margin:24px 0}code{background:#F1EBE2;p
 <li><strong>Read-only.</strong> Nesi asks for one extra permission: <code>https://www.googleapis.com/auth/calendar.readonly</code>. Nesi can't add, change or delete anything in your Google Calendar. The Google account can be different from the one you sign in to Nesi with.</li>
 <li><strong>What Nesi reads:</strong></li>
 <p>  - Your calendar list: names, colors and which one is primary.   - For the calendars you pick, each event's title, start and end time, all-day flag, location and status, for the days you're viewing.   - Events marked private show as "Busy" with no title or place. Birthdays and working-location entries are skipped.</p>
-<li><strong>What Nesi ignores:</strong> Google's reply also includes details like descriptions and guest lists. Nesi doesn't use or keep them. [VERIFY: the developer plans to ask Google only for the needed fields.]</li>
+<li><strong>What Nesi ignores:</strong> Google's reply also includes details like descriptions and guest lists. Nesi doesn't use or keep them.</li>
 <li><strong>Where it's kept: on this phone only.</strong></li>
 <p>  - Google's permission (access tokens) is held by Google's sign-in software in the iPhone Keychain.   - Nesi keeps the connected account's email, your calendar list and which calendars you picked in the Keychain too.   - Events are fetched straight from Google to your phone and kept in memory only while the app is open.   - <strong>Nothing from Google Calendar is sent to our servers, saved in your family's data, or shown to your co-parent or caregivers.</strong> Anyone using your phone can see them in Nesi.</p>
-<li><strong>Not shared with the AI or anyone else.</strong> Google Calendar events aren't sent to OpenAI, PostHog, Sentry or any other service. [VERIFY: confirmed by code review of the AI, notification and analytics paths. The developer should confirm no other path uses them.]</li>
+<li><strong>Not shared with the AI or anyone else.</strong> Google Calendar events aren't sent to OpenAI, PostHog, Sentry or any other service.</li>
 <li><strong>Disconnecting:</strong> go to <strong>Settings › Google Calendar › Disconnect Google Calendar</strong>. That revokes Nesi's access at Google and forgets the account on this phone. Delete account, Delete everything and Start over do the same. You can also remove Nesi's access anytime at <strong>myaccount.google.com/permissions</strong>.</li>
-<li><strong>Google's rules:</strong> Nesi's use and transfer of information received from Google APIs to any other app will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. We use Google data only to show your events in Nesi. We don't use it for ads, we don't sell it, we don't use it to train AI models, and people don't read it unless you ask us to for support or the law requires it.</li>
+<li><strong>Google's rules:</strong> Nesi's use and transfer of information received from Google APIs to any other app will adhere to the Google API Services User Data Policy (https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. We use Google data only to show your events in Nesi. We don't use it for ads, we don't sell it, we don't use it to train AI models, and people don't read it unless you ask us to for support or the law requires it.</li>
 </ul>
 <h3>How the AI works</h3>
 <p>Nesi's AI runs on <strong>OpenAI</strong>. Requests go through our server, which holds the key and limits use. Your phone never contacts OpenAI directly, so OpenAI sees our server's IP address, not yours. Our server logs counts and costs, never what you wrote. Our server tells OpenAI not to store requests (<code>store: false</code>).</p>
@@ -77,12 +74,11 @@ hr{border:0;border-top:1px solid #E9E2D8;margin:24px 0}code{background:#F1EBE2;p
 <li><strong>Kids' names</strong> are replaced with placeholders such as "Child 1" in the text Nesi sends. Kids' ages (in months) and today's date may be sent so ideas fit your family.</li>
 <li><strong>Adults' names</strong> in your family are replaced with placeholders such as "Adult 1" too.</li>
 <li><strong>Everything else you type is sent as you typed it.</strong> If you write an allergy, a health detail or an address in a message, the AI provider will see it.</li>
-<li><strong>Photos are sent as they are.</strong> That includes flyers, recipe photos and anything else in the picture, such as names, school names or faces. [VERIFY: whether hidden location data (EXIF) is stripped from photos sent to the AI, as it is for uploads.] Crop a photo before you share it if you like.</li>
+<li><strong>Photos are sent as they are.</strong> That includes flyers, recipe photos and anything else in the picture, such as names, school names or faces. Crop a photo before you share it if you like.</li>
 <li><strong>Links you paste:</strong> text from that web page may be sent so Nesi can pull out the details.</li>
 <li><strong>Your stored home point is never included</strong>, and your allergy list isn't sent for meal planning.</li>
-<li><strong>Before a photo or a long message goes to the AI, the app shows a short notice</strong> so you can decide. [VERIFY: notice shipped in the pilot build.] A full consent screen comes before the public launch.</li>
+<li><strong>Before a photo or a long message goes to the AI, the app shows a short notice</strong> so you can decide. A full consent screen comes before the public launch.</li>
 <li>AI answers are ideas only. Nothing is added to your plan until you confirm it.</li>
-<li>Live AI is on in the pilot build (confirmed in pre-pilot QA). [VERIFY: confirm OpenAI's data settings for our account: use for training (off by default for API data), retention, and zero data retention.]</li>
 </ul>
 <h3>Analytics and crash reports</h3>
 <ul>
@@ -90,7 +86,7 @@ hr{border:0;border-top:1px solid #E9E2D8;margin:24px 0}code{background:#F1EBE2;p
 <p>  - It doesn't get names, email, typed text, location, child information or your family ID.   - It uses a random device ID and basic device and OS details.   - There's no session recording, no automatic tap or screen tracking, and no location lookup.</p>
 <li><strong>"How did you hear about Nesi?"</strong> Your answer is saved with your family's setup. It isn't sent to analytics in the pilot build.</li>
 <li><strong>Sentry</strong> receives crash and error reports with device, OS and app details. Before a report leaves your phone, names, emails, phone numbers, addresses, coordinates, zip codes and typed input are removed. There are no screenshots.</li>
-<li>There's no in-app switch to turn analytics or crash reports off yet, and because events aren't linked to you, we can't find and delete one family's events afterwards. (PostHog and Sentry are on in the pilot build, confirmed in pre-pilot QA.)</li>
+<li>There's no in-app switch to turn analytics or crash reports off yet, and because events aren't linked to you, we can't find and delete one family's events afterwards.</li>
 </ul>
 <h3>Notifications</h3>
 <p>Reminders in the pilot are <strong>local</strong>: your phone schedules them itself. We don't collect a push-notification token. If we add server push later, we'll update this policy first.</p>
@@ -115,24 +111,24 @@ hr{border:0;border-top:1px solid #E9E2D8;margin:24px 0}code{background:#F1EBE2;p
 <p>  - <strong>It also deletes your own sign-in</strong>, unless you turn off <strong>Also delete my sign-in</strong> on that screen. Your co-parent's and caregivers' sign-ins stay until each person uses Delete account.</p>
 <li><strong>Delete account</strong> (Settings › Account, anyone) deletes your sign-in and its usage counters, and clears this phone.</li>
 <p>  - If you're the only parent, it deletes the whole family too. If there's a co-parent, the family stays with them.   - If you're a caregiver, events you added stay in the family.</p>
-<li><strong>Sign in with Apple:</strong> deleting your sign-in (Delete account, or Delete everything with your sign-in) also disconnects Nesi from your Apple ID. If you want to double-check, it's optional: open iPhone <strong>Settings › [your name] › Sign-In &amp; Security › Sign in with Apple</strong>, choose Nesi, and tap <strong>Stop Using</strong>.</li>
+<li><strong>Sign in with Apple:</strong> deleting your sign-in (Delete account, or Delete everything with your sign-in) also disconnects Nesi from your Apple ID. If you want to double-check, it's optional: open iPhone <strong>Settings</strong>, tap your name, then <strong>Sign-In &amp; Security › Sign in with Apple</strong>, choose Nesi, and tap <strong>Stop Using</strong>.</li>
 <li><strong>Google:</strong> Delete account, Delete everything and Start over also remove Nesi's Google access from this phone. They disconnect Google Calendar and sign out of Google, and they clear the Google Calendar settings saved on this phone. You can also check <strong>myaccount.google.com/permissions</strong> anytime and remove Nesi.</li>
 <li><strong>Removing a child</strong> removes their profile, schedule blocks and allergy entries. Photos of that child aren't removed automatically, so delete them yourself or ask us to.</li>
 <li><strong>Start over as new user</strong> erases this phone's copy only, including the sign-in and Google settings saved on it.</li>
-<li><strong>By email:</strong> write to nesicustomersupport@gmail.com and we'll delete your family's data within [30] days.</li>
+<li><strong>By email:</strong> write to nesicustomersupport@gmail.com and we'll delete your family's data.</li>
 <li><strong>What deletion doesn't reach yet:</strong></li>
 <p>  - copies our service providers already have (OpenAI, PostHog, Sentry, openrouteservice)   - provider logs, until they expire   - our database backups, until they expire (see below)   - a few technical records not tied to your family, such as cached venue lookups</p>
 </ul>
 <h3>How long we keep data</h3>
 <ul>
-<li><strong>Your family's data</strong> stays until you delete it or ask us to. After the pilot ends on Dec 21, we keep it so your plans can carry over to the App Store version (planned, not guaranteed). <strong>If your family doesn't continue with Nesi, we delete your family's data 90 days after the pilot ends (by Mar 21, 2027).</strong> If you'd rather we delete it sooner, just ask.</li>
-<li><strong>Invites</strong> expire after 14 days. <strong>Usage counters</strong> (daily AI, map and import counts) are deleted after 30 days. [VERIFY: the 30-day purge job is live.] A few other technical records (expired invites, sign-in merge tickets, map caches) aren't automatically cleared yet. [VERIFY: retention cleanup plan.]</li>
-<li><strong>Backups:</strong> our database provider (Supabase, Pro plan) keeps daily backups for a limited window, about 7 days. [VERIFY: confirm Pro backup retention, and that Pro is active before Nov 9.] Deleted data drops out of the backups as they expire.</li>
+<li><strong>Your family's data</strong> stays until you delete it or ask us to. After the pilot ends on Dec 9, we keep it so your plans can carry over to the App Store version (planned, not guaranteed). <strong>If your family doesn't continue with Nesi, we delete your family's data 90 days after the pilot ends (by Mar 9, 2027).</strong> If you'd rather we delete it sooner, just ask.</li>
+<li><strong>Invites</strong> expire after 14 days. <strong>Usage counters</strong> (daily AI, map and import counts) are deleted after 30 days. A few other technical records (expired invites, sign-in merge tickets, map caches) aren't automatically cleared yet.</li>
+<li><strong>Backups:</strong> our database provider (Supabase) keeps backups for a limited time. Deleted data drops out of the backups as they expire.</li>
 <li><strong>Service providers</strong> (OpenAI, PostHog, Sentry, openrouteservice, Supabase logs) keep their own logs on their own schedules.</li>
 <li><strong>Pilot notes and feedback</strong> (check-in notes, survey answers and feedback) are kept outside the app under your pilot code and deleted 12 months after launch. Your pilot code is matched to your app use with a short code you read to us at your first check-in.</li>
 </ul>
 <h3>Security</h3>
 <p>Data is encrypted in transit. Your sign-in is kept in the iPhone's Keychain. Every table is locked to your family, and photos have hidden location data removed before upload. No system is perfectly secure. If something goes wrong, we'll tell affected families quickly and in plain language.</p>
 <h3>Changes and contact</h3>
-<p>We'll tell pilot families before any important change, including switching on Microsoft calendar connect, push notifications or new Google permissions. Questions, a copy of your data, or deletion: nesicustomersupport@gmail.com. Mike Letterle (individual), 110 Timberwood Drive, Glenshaw PA 15116. This policy and the pilot are governed by Pennsylvania law, with venue in Allegheny County [counsel to confirm]. This page isn't listed in search engines. We share its link only in pilot invites: https://mikeletterle-sys.github.io/pilot-docs/legal/privacy.html [VERIFY URL].</p>
+<p>We'll tell pilot families before any important change, including switching on Microsoft calendar connect, push notifications or new Google permissions. Questions, a copy of your data, or deletion: nesicustomersupport@gmail.com. Mike Letterle (individual), 110 Timberwood Drive, Glenshaw PA 15116. This policy and the pilot are governed by Pennsylvania law, with venue in Allegheny County. This page isn't listed in search engines. We share its link only in pilot invites: https://mikeletterle-sys.github.io/pilot-docs/legal/privacy.html.</p>
 <hr><p class="meta"><a href="./index.html">Nesi legal</a> · <a href="./pilot-agreement.html">Pilot Agreement</a> · <a href="./privacy.html">Privacy Policy</a></p></main></body></html>
